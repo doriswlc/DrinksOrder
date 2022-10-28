@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct DrinkMenu: Codable {
+struct DrinkMenu: Decodable {
     let records: [Record]
 }
-struct Record: Codable {
+struct Record: Decodable {
     let fields: Fields
 }
-struct Fields: Codable {
+struct Fields: Decodable {
     let drinkname: String
     let size: [String]
     let ih: [String]
@@ -21,6 +21,6 @@ struct Fields: Codable {
     let price: [String]
     let picture: [Picture]
 }
-struct Picture: Codable {
+struct Picture: Decodable {
     let url: URL
 }
